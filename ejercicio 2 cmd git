@@ -1,1 +1,18 @@
-
+git log
+mkdir capitulos
+echo "Git es un sistema de control de versiones ideado por Linus Torvalds." > capitulos/capitulo1.txt
+git add capitulos/capitulo1.txt
+git commit -m "Añadido capítulo 1."
+git log
+echo "El flujo de trabajo básico con Git consiste en: 1- Hacer cambios en el repositorio. 2- Añadir los cambios a la zona de intercambio temporal. 3- Hacer un commit de los cambios." > capitulos/capitulo2.txt
+git add capitulos/capitulo2.txt
+git commit -m "Añadido capítulo 2."
+git diff HEAD~2 HEAD
+echo "Git permite la creación de ramas lo que permite tener distintas versiones del mismo proyecto y trabajar de manera simultanea en ellas." > capitulos/capitulo3.txt
+git add capitulos/capitulo3.txt
+git commit -m "Añadido capítulo 3."
+git diff $(git rev-list --max-parents=0 HEAD) HEAD
+echo "Capítulo 5: Conceptos avanzados" >> indice.txt
+git add indice.txt
+git commit -m "Añadido capítulo 5 al índice."
+git log -- indice.txt
