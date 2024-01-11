@@ -1,20 +1,20 @@
-git branch bibliografia
+negit branch bibliografia
 git checkout bibliografia
 git branch
 echo "Texto del capítulo 4." > capitulos/capitulo4.txt
 git add capitulos/capitulo4.txt
 git commit -m "Añadido capítulo 4."
-git log --all
+git log --oneline
 git checkout bibliografia
 echo "Chacon, S. and Straub, B. Pro Git. Apress." > bibliografia.txt
 git add bibliografia.txt
 git commit -m "Añadida primera referencia bibliográfica."
-git log --all
+git log --oneline
 git checkout master
 git merge bibliografia
-git log --all
+git log --oneline
 git branch -d bibliografia
-git log --all
+git log --oneline
 git branch bibliografia
 git checkout bibliografia
 echo "Scott Chacon and Ben Straub. Pro Git. Apress." > bibliografia.txt
@@ -29,4 +29,4 @@ git commit -m "Añadida nueva referencia bibliográfica."
 git merge bibliografia
 git add bibliografia.txt
 git commit -m "Resuelto conflicto de bibliografía."
-git log --all
+git log --oneline
